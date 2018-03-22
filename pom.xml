@@ -7,11 +7,11 @@
 	<packaging>war</packaging>
 
 	<parent>
-    <groupId>hu.4dsoft.app</groupId>
-  <artifactId>app</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  </parent>
-	
+		<groupId>hu.4dsoft.app</groupId>
+		<artifactId>app</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
 	<dependencies>
 		<dependency>
 			<groupId>javax</groupId>
@@ -19,21 +19,46 @@
 			<version>7.0</version>
 			<scope>provided</scope>
 		</dependency>
-		  <dependency>
+		<dependency>
 			<groupId>com.company</groupId>
-	<artifactId>generatedEjb</artifactId>
-	<version>1.0-SNAPSHOT</version>
-		</dependency>  
+			<artifactId>generatedEjb</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.wicketstuff/wicketstuff-javaee-inject -->
+		<dependency>
+			<groupId>org.wicketstuff</groupId>
+			<artifactId>wicketstuff-javaee-inject</artifactId>
+			<version>6.28.0</version>
+		</dependency>
 		<dependency>
 			<groupId>com.company</groupId>
 			<artifactId>generatedEjb</artifactId>
 			<version>1.0-SNAPSHOT</version>
 			<type>ejb-client</type>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.wicket</groupId>
+			<artifactId>wicket</artifactId>
+			<version>6.29.0</version>
+			<type>pom</type>
+		</dependency>
+
 	</dependencies>
 
 	<build>
-		<sourceDirectory>src</sourceDirectory>
+		<sourceDirectory>src/Client</sourceDirectory>
+		<resources>
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/</directory>
+				<includes>
+					<include>**</include>
+				</includes>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

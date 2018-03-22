@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Wicket Form</title>
+</head>
+<body>
+<h2> Lets see if you are in the Database</h2>
+<form wicket:id="NameForm">
+Name: <br/>
+<input type="text" wicket:id="name" />
+<h2>Persist into Database</h2>
+<input type="text" wicket:id="newname" />
+<input type="submit" value="Submit"/>
+<ul>
+ <li wicket:id="resultNames"></li>
+</ul>
+</form>
+</body>
+</html>

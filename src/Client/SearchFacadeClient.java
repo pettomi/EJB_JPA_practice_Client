@@ -53,7 +53,7 @@ public class SearchFacadeClient extends HttpServlet {
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html;charset=UTF-8");
-	// 	searchFacade.createCustomer("Tomi");
+	 	//searchFacade.createCustomer("Andi");
 		PrintWriter out = response.getWriter();
 		try {
 			out.println("<html>");
@@ -65,7 +65,7 @@ public class SearchFacadeClient extends HttpServlet {
 
 			out.println("<h1>SearchFacade Lookup</h1>");
 			out.println("<h1>Searching Customers</h1>");
-			List<String> customerList = searchFacade.customerSearch("Tomi");
+			List<String> customerList = searchFacade.customerSearch("Andi");
 			out.println("<h1>Printing Customer list</h1>");
 			for (String customer : (List<String>) customerList) {
 				out.println("<h1>" + customer + "</h1>");

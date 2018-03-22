@@ -1,1 +1,4 @@
 Client\SearchFacadeClient.class
+Client\FormPage.class
+Client\NameForm.class
+Client\WicketApplication.class
